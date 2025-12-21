@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 
-// Custom hook for managing state with localStorage
+// Custom hook for managing state with sessionStorage
 const useLocalStorage = (key, initialValue) => {
-  // Get initial value from localStorage or use provided initialValue
+  // Get initial value from sessionStorage or use provided initialValue
   const [value, setValue] = useState(() => {
     try {
-      const item = localStorage.getItem(key);
+      const item = sessionStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error('Error reading from localStorage:', error);
+      console.error('Error reading from sessionStorage:', error);
       return initialValue;
     }
   });
 
-  // Update localStorage when value changes
+  // Update sessionStorage when value changes
   useEffect(() => {
     try {
-      localStorage.setItem(key, JSON.stringify(value));
+      sessionStorage.setItem(key, JSON.stringify(value));
     } catch (error) {
-      console.error('Error writing to localStorage:', error);
+      console.error('Error writing to sessionStorage:', error);
     }
   }, [key, value]);
 
