@@ -1,6 +1,6 @@
 # Employee Manager App
 
-A simple Employee CRUD application built with Vite + React, using Material UI and Tailwind CSS for the interface, and localStorage for data persistence.
+A simple Employee CRUD application built with Vite + React, using Material UI and Tailwind CSS for the interface, and sessionStorage for data persistence.
 
 ## Features
 
@@ -31,7 +31,7 @@ The app will be available at http://localhost:5173
 - Vite + React
 - Material UI (MUI) for components
 - Tailwind CSS for layout and utilities
-- localStorage for data persistence
+- sessionStorage for data persistence
 
 ## Usage
 
